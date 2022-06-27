@@ -1,0 +1,79 @@
+<section class="testimony">
+    <div class="testimony__div">
+        <h2 class="testimony__title">{{ section.settings.testimony_title }}</h2>
+        <div class="slideshow">
+            <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                {% for block in section.blocks %}
+                    <div class="slide" id="slide-{{ block.id }}">
+                        <span class="testimony__text">"{{ block.settings.testimony_text }}"</span>
+                        <img src="{{ block.settings.customer_img | img_url: 'master' }}" alt="Customer image">
+                    </div>
+                {% endfor %}
+                <div class="navigationSlider">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% stylesheet %}
+    #r1:checked ~ .slide:nth-of-type(1) {
+        margin-left: 0%
+    }
+    #r2:checked ~ .slide:nth-of-type(1) {
+        margin-left: -25%
+    }
+    #r3:checked ~ .slide:nth-of-type(1) {
+        margin-left: -50%
+    }
+    #r4:checked ~ .slide:nth-of-type(1) {
+        margin-left: -75%
+    }
+{% endstylesheet %}
+
+{% schema %}
+{
+    "name": "Testimony",
+    "settings": [
+        {
+            "type": "text",
+            "id": "testimony_title",
+            "label": "Testitmony Title",
+            "default": "Testimony"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "slide",
+            "name": "Testimony person",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "testimony_text",
+                    "label": "Testitmony Text",
+                    "default": "Let the customers do the talk for you"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "customer_img",
+                    "label": "Customer Image"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "category": "Customers testimonies",
+            "name":"Testimony"
+        }
+    ]
+}
+{% endschema %}

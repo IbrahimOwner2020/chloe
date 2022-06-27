@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 14px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: 12px;
+    }
+}
+
+$font-primary: 'Domine', serif;;
+$font-secondary: 'Roboto', sans-serif;
+
+$color-white: #fff;
+$color-white-1: #d4d4d4;
+$color-brown-1: #a95c44;
+$color-brown-2: #722811;
+$color-brown-3: #5b3909;
+$color-brown-4: #795b39;
+$color-brown-5: #b88339;
+$color-cream-1: #fff1e1;
+$color-cream-2: #efcfaa;
+$color-cream-3: #ffe0b4;
+$color-black: #2b2b2b;
+$color-black-1: #928475;

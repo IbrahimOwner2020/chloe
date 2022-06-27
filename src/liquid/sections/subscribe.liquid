@@ -1,0 +1,45 @@
+{% render 'subscribe' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Subscription",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "subscription_img",
+                "label": "Subscription Image"
+            },
+            {
+                "type": "text",
+                "id": "subscription_title",
+                "label": "Subscription Title",
+                "default": "Insert your section title here"
+            },
+            {
+                "type": "text",
+                "id": "subscription_text",
+                "label": "Subscription Text",
+                "default": "I'm baby sustainable four dollar toast tilde vegan ."
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link Text",
+                "default": "click here"
+            },
+            {
+                "type": "url",
+                "id": "link_url",
+                "label": "Link Url"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Newsletter subscription",
+                "name":"Subscription"
+            }
+        ]
+    }
+{% endschema %}

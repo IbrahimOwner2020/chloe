@@ -1,0 +1,39 @@
+{% render 'hero' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Hero",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "back_img",
+                "label": "Background Image"
+            },
+            {
+                "type": "text",
+                "id": "hero_title",
+                "label": "Hero Title",
+                "default": "Insert your page title here"
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link Text",
+                "default": "Click here"
+            },
+            {
+                "type": "url",
+                "id": "link_url",
+                "label": "Link Url"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Text overraying image",
+                "name":"Hero"
+            }
+        ]
+    }
+{% endschema %}

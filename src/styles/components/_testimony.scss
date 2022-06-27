@@ -1,0 +1,134 @@
+.testimony {
+    background-color: #000;
+    padding: 4rem 2rem 4rem 2rem;
+
+    @media only screen and (max-width: 700px) {
+        padding: 3rem 1rem;
+    }
+
+    &__div {
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding-bottom: 3rem;
+
+        @media only screen and (max-width: 700px) {
+            max-width: 100%;
+        }
+
+        & img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 50%;
+            transform: translateX(-50%);
+
+
+            @media only screen and (max-width: 600px) {
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 3.8rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        color: $color-cream-3;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__text {
+        margin: 4rem 0;
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: $font-secondary;
+        color: $color-black-1;
+        text-align: center;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        @media only screen and (max-width: 400px) {
+            font-size: 1.1rem;
+            margin: 2rem 0;
+        }
+    }
+
+    &__btn-right,
+    &__btn-left {
+        color: $color-white;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__btn-right {
+        right: 0;
+    }
+
+    &__btn-left {
+        left: 0;
+    }
+}
+
+.slideshow {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    transition: all .3s;
+}
+
+.navigationSlider {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bar {
+    display: inline-block;
+    width: 1rem;
+    border-radius: 50%;
+    height: 1rem;
+    border: 2px solid $color-white;
+    background-color: transparent;
+    margin-right: 6px;
+    transition: all .3s;
+
+
+    &:hover {
+        background-color: $color-white;
+    }
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}

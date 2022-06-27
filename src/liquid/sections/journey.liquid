@@ -1,0 +1,51 @@
+{% render 'journey' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Journey",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "journey_img",
+                "label": "Journey Image"
+            },
+            {
+                "type": "text",
+                "id": "journey_title",
+                "label": "Journey Title",
+                "default": "Insert your section title here"
+            },
+            {
+                "type": "text",
+                "id": "journey_heading",
+                "label": "Journey Heading",
+                "default": "I'm baby sustainable four dollar toast tilde vegan semiotics VHS cardigan iceland DIY everyday carry."
+            },
+            {
+                "type": "text",
+                "id": "journey_text",
+                "label": "Journey Text",
+                "default": "I'm baby sustainable four dollar toast tilde vegan semiotics VHS cardigan iceland DIY everyday carry. Vexillologist retro tbh fanny pack PBR&B scenester blue bottle +1 pork belly chartreuse lo-fi. 3 wolf moon blue bottle vape fam hell of cloud bread migas."
+            },
+            {
+                "type": "text",
+                "id": "link_text",
+                "label": "Link Text",
+                "default": "click here"
+            },
+            {
+                "type": "url",
+                "id": "link_url",
+                "label": "Link Url"
+            }
+        ],
+        "presets": [
+            {
+                "category": "Image with text",
+                "name":"Journey"
+            }
+        ]
+    }
+{% endschema %}

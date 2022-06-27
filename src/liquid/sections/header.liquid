@@ -1,0 +1,36 @@
+{% render 'header' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            },
+            {
+                "type": "range",
+                "id": "logo_width",
+                "label": "Logo Width",
+                "unit": "px",
+                "min": 50,
+                "max": 200,
+                "step": 5,
+                "default": 80
+            },
+            {
+                "type": "url",
+                "id": "cart_url",
+                "label": "Cart link"
+            },
+            {
+                "type": "url",
+                "id": "search_url",
+                "label": "Search link"
+            }
+        ]
+    }
+{% endschema %}

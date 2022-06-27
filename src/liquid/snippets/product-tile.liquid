@@ -1,0 +1,24 @@
+{%- comment -%}
+    Requires the following argument
+
+    - product
+{%- endcomment -%}
+
+<div class="product-tile">
+    <a href="{{ product.url }}">
+        <img 
+            class="product-tile__image" 
+            src="{{ product.featured_image | img_url: 'master' }}" 
+            alt="{{ product.featured_image.alt }}"
+        >
+    </a>
+    <div class="product-tile__info">
+        <a href="{{ product.url }}">
+            <h3 class="product-tile__title">{{ product.title }}</h3>
+        </a> 
+        <span class="product-tile__price">{{ product.price | money }}</span>
+        {% form 'product', product %}
+            <button class="product-tile__btn" type="submit">Add To Cart</button>
+        {% endform %}
+    </div>
+</div>

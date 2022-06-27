@@ -1,0 +1,74 @@
+<section class="featured-product">
+    <div class="featured-product__back-img">
+        <img src="{{ section.settings.back_img | img_url: 'master' }}" alt="featured-product background">
+    </div>
+    <div class="featured-product__div">
+        <a href="{{ section.settings.product_url }}">
+            <img 
+                class="featured-product__image" 
+                src="{{ section.settings.product_img | img_url: 'master' }}" 
+                alt="featured product image"
+            >
+        </a>
+        <div class="featured-product__info">
+            <a href="{{ section.settings.product_url }}">
+                <h3 class="featured-product__title product-tile__title">{{ section.settings.product_title }}</h3>
+            </a> 
+            <span class="featured-product__price product-tile__price">$50</span>
+            <div class="time">
+                <div class="time__days">
+                    <span class="time__days-no">00</span>
+                    <span class="time__days-name">Days</span>
+                </div>
+                <div class="time__days">
+                    <span class="time__days-no">00</span>
+                    <span class="time__days-name">Hours</span>
+                </div>
+                <div class="time__days">
+                    <span class="time__days-no">00</span>
+                    <span class="time__days-name">Minutes</span>
+                </div>
+                <div class="time__days">
+                    <span class="time__days-no">00</span>
+                    <span class="time__days-name">Secs</span>
+                </div>
+            </div>
+            <button class="featured-product__btn product-tile__btn" type="submit">Add To Cart</button>
+        </div>
+    </div>  
+</section>
+
+{% schema %}
+{
+    "name": "Product",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "back_img",
+            "label": "Back Image"
+        },
+        {
+            "type": "url",
+            "id": "product_url",
+            "label": "Product link"
+        },
+        {
+            "type": "image_picker",
+            "id": "product_img",
+            "label": "product"
+        },
+        {
+            "type": "text",
+            "id": "product_title",
+            "label": "Product title",
+            "default": "chloe #"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Choose your promoted product",
+            "name":"Featured Product"
+        }
+    ]
+}
+{% endschema %}

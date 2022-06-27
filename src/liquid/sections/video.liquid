@@ -1,0 +1,22 @@
+{% render 'video' with {
+    settings: section.settings
+} %}
+
+{% schema %}
+    {
+        "name": "Video",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "back_image",
+                "label": "Choose a backgrond image"
+            }
+        ],
+        "presets": [
+            {
+                "category": "select a video",
+                "name":"Video"
+            }
+        ]
+    }
+{% endschema %}

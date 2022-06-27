@@ -1,0 +1,12 @@
+<section class="collect">
+    <div class="collection">
+        {% for collection in collections %}
+        <div class="collection__box">
+            <a class="collection__img" href="collections/{{ collection.handle }}" title="view products in {{ collection.title }}">
+                <img src="{{ collection.image | img_url: 'master' }}" alt="">
+            </a>
+            <a href="collections/{{ collection.handle }}" title="view products in {{ collection.title }}" class="collection__title">{{ collection.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>

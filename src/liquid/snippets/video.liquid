@@ -1,0 +1,17 @@
+{% style %}
+    .video {
+        background-image: url('{{ settings.back_image | img_url: 'master' }}');
+    }
+{% endstyle %}
+
+<section class="video trigger" data-modal-trigger="trigger-1">
+    <div class="modal" data-modal="trigger-1">
+        <article class="content-wrapper"><button class="close"></button>
+            <!-- <iframe 
+                class="video__video"
+                src="https://www.youtube.com/embed/MtzByPQ9F6o?mute=1">
+            </iframe> -->
+        </article>
+    </div>
+</section>
+

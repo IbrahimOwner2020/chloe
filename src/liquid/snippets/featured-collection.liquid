@@ -1,0 +1,15 @@
+{%- comment -%}
+    Require the following Argument
+    - settings
+{%- endcomment -%}
+
+<section class="featured-products">
+    <div class="featured-products__div">
+        <h2 class="featured-products__title">
+            Featured Product
+        </h2>
+        <div class="featured-products__items">
+            {% render 'product-tile' for collections[settings.collection].products as product %}
+        </div>
+    </div>
+</section>

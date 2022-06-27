@@ -1,0 +1,89 @@
+.line-item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    margin: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-brown-2;
+
+    &__left {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__image {
+        width: 11rem;
+        height: 13rem;
+        border-radius: 5px;
+        margin-right: 1.5rem;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin-bottom: 3rem;
+        line-height: 1.8rem;
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: .93rem;
+        color: $color-brown-4;
+    }
+
+    &__right {
+        position: absolute;
+        bottom: 1.3rem;
+        right: 0;
+    }
+
+    &__remove {
+        text-decoration: none;
+        color: #a80000;
+        border-bottom: 1px solid #a80000;
+        padding-bottom: .2rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        color: $color-brown-3;
+    }
+
+    &__price {
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        font-weight: 400;
+        font-family: $font-primary;
+        color: $color-brown-3;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .line-item {
+        &__image {
+            width: 8rem;
+            height: 10rem;
+        }
+
+        &__details {
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .line-item {
+        margin: .2rem;
+        padding: .5rem 0;
+        border-bottom: 1px solid $color-brown-2;
+
+        &__image {
+            margin-right: .3rem;
+        }
+    }
+}

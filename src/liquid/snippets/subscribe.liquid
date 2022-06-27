@@ -1,0 +1,16 @@
+{% style %}
+    .subscribe {
+        background-image: linear-gradient(rgba(74, 74, 74, 0.6), rgba(74, 74, 74, 0.6)), url('{{ settings.subscription_img | img_url: 'master' }}');
+    }
+{% endstyle %}
+
+<section class="subscribe">
+    <div class="subscribe__div">
+        <h3 class="subscribe__title">{{ settings.subscription_title }}</h3>
+        <span class="subscribe__text">{{ settings.subscription_text }}</span>
+        <div class="subscribe__element">
+            <input type="text" placeholder="Your Email">
+            <a href="{{ settings.link_url }}">{{ settings.link_text }}</a>
+        </div>
+    </div>
+</section>

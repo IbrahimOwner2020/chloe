@@ -1,0 +1,65 @@
+<section class="faq">
+    <div class="faq__div">
+        <div class="faq__right">
+            <h2 class="faq__title">{{ section.settings.faq_title }}</h2>
+            <img src="{{ section.settings.faq_img | img_url: 'master' }}" alt="faq image">
+        </div>
+        <div class="faq__left">
+            <div class="according">
+                <nav class="accordion arrows">
+                    <input type="radio" name="accordion" id="cd1" checked/>
+                    <section class="box">
+                        <label class="box-title" for="cd1">Question 1</label>
+                        <label class="box-close" for="acc-close"></label>
+                        <div class="box-content">Write some answers for FAQ questions</div>
+                    </section>
+                    <input type="radio" name="accordion" id="cd2" />
+                    <section class="box">
+                        <label class="box-title" for="cd2">Question 2</label>
+                        <label class="box-close" for="acc-close"></label>
+                        <div class="box-content">Write some answers for FAQ questions</div>
+                    </section>
+                    <input type="radio" name="accordion" id="cd3" />
+                    <section class="box">
+                        <label class="box-title" for="cd3">Question 3</label>
+                        <label class="box-close" for="acc-close"></label>
+                        <div class="box-content">Write some answers for FAQ questions</div>
+                    </section>
+                    <input type="radio" name="accordion" id="cd4" />
+                    <section class="box">
+                        <label class="box-title" for="cd4">Question 4</label>
+                        <label class="box-close" for="acc-close"></label>
+                        <div class="box-content">Write some answers for FAQ questions</div>
+                    </section>
+            
+                    <input type="radio" name="accordion" id="acc-close" />
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Faq",
+    "settings": [
+        {
+            "type": "text",
+            "id": "faq_title",
+            "label": "Faq Title",
+            "default": "FAQ"
+        },
+        {
+            "type": "image_picker",
+            "id": "faq_img",
+            "label": "Back Image"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Question and answers",
+            "name":"Faq"
+        }
+    ]
+}
+{% endschema %}
